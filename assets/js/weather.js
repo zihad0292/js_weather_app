@@ -16,31 +16,19 @@
     const TYPEOFDATA = "current.json";
     var query = "Sylhet";
 
-    fetch(`${BASEURL}/${TYPEOFDATA}?key=${KEY}&q=${query}`)
-    .then(response => response.json())
-    .then(forecast => {
-        console.log(forecast.current);
-        console.log(forecast.location);
-        var conditioIcon = forecast.current.condition.icon;
-        conditioIcon = conditioIcon.replace("//cdn.apixu.com/weather", "./assets/images/weatherIcons");
-        weatherConditionIcon.src = conditioIcon;
-        resultCity.innerHTML  = forecast.location.name;
-        dayNightStatus.innerHTML  = forecast.current.is_day == 1 ? "Day" : "Night";
-        weather.innerHTML  = forecast.current.condition.text;
-        temp.innerHTML  = forecast.current.temp_c;
-        feelsLike.innerHTML  = forecast.current.feelslike_c;
-        humidity.innerHTML  = forecast.current.humidity;
-        wind.innerHTML  = forecast.current.wind_kph;
-        windDir.innerHTML  = forecast.current.wind_dir;
-
-    });
+    showWeather("Sylhet");
 
     btn.addEventListener("click", f => {
         if(!citySearch.value){
             alert("Please enter a cityname first. e.g. Dhaka or Paris")
             return;
         }
-        fetch(`${BASEURL}/${TYPEOFDATA}?key=${KEY}&q=${citySearch.value}`)
+        showWeather(citySearch.value);
+
+    });
+
+    function showWeather(cityName){
+        fetch(`${BASEURL}/${TYPEOFDATA}?key=${KEY}&q=${cityName}`)
         .then(response => response.json())
         .then(forecast => {
             console.log(forecast.current);
@@ -58,5 +46,5 @@
             windDir.innerHTML  = forecast.current.wind_dir;
     
         });
-    });
+    }
  })();

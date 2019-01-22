@@ -1,0 +1,77 @@
+body{
+    position: relative;
+    color: #fff;
+    background: url('../images/bg.jpg') no-repeat center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    left: 0;
+    top:0;
+    background: #4B648E;
+    opacity: .5;
+    z-index: -1;
+}
+
+header{
+    padding: 50px 15px 80px;
+}
+
+.wrapper{
+    padding: 0px 0 50px;
+}
+
+.searchBox input{
+    width: 100%;
+    min-height: 38px;
+    padding: 5px 10px;
+}
+
+.searchBox h2{
+    font-size: 16px;
+    line-height: 1em;
+    margin-top: -31px;
+    margin-bottom: 15px;
+}
+
+.result.row {
+    margin-top: 120px;
+}
+
+#resultCity{
+    margin: 0 0 50px;
+    position: relative;
+    display: inline-block;
+}
+
+#resultCity h2{
+    font-size: 42px;
+    letter-spacing: 2px;
+}
+
+#weatherCondition {
+    position: absolute;
+    top: -130%;
+    left: 120%;
+}
+
+#weatherCondition p {
+    margin: 0;
+}
+
+#weatherCondition .dayNightStatus {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+#weatherCondition .weather {
+    font-size: .8em;
+}
+/* .resultItem{
+    min-height: 120px;
+} */

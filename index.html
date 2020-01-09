@@ -2,79 +2,116 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Weather App By Zihad</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <link rel="stylesheet" href="assets/css/style.css">
-    </head>
-    <body>
-        <div class="overlay"></div>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <header class="text-center">
-            <h1>Weather App</h1>
-        </header>
-        <section class="wrapper">
-            <div class="container">
-                <div class="searchBox row">
-                    <div class="col-7 col-sm-5 offset-0 offset-sm-2">
-                        <h2> Enter a cityname and click the button to show the weather.</h2>
-                        <input type="text" name="citySearch" id="citySearch" placeholder="e.g. Dhaka, Paris, London">
-                    </div>
-                    <div class="col-5 col-sm-3">
-                        <button class="btn btn-primary searchButton">Get weather info</button>
-                    </div> 
-                </div>
-                <div class="result row text-center">
-                    <div class="col-sm-12">
-                        <div id="resultCity">
-                            <h2>Sylhet</h2> 
-                            <div id="weatherCondition">
-                                <p class="dayNightStatus">Day</p>
-                                <img id="icon" src="assets/images/weatherIcons/64x64/day/113.png" alt="">
-                                <p class="weather">Mist</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-sm-3">
-                        <div class="resultItem temp">
-                            <p><span class="resultValue">14</span>&#176;C</p>
-                            <h3 class="resultTitle">Temperature</h3>
-                        </div>
-                    </div>
-                    <div class="col-6 col-sm-3">
-                        <div class="resultItem feelsLike">
-                            <p><span class="resultValue">12</span>&#176;C</p>
-                            <h3 class="resultTitle">Feels like</h3>
-                        </div>
-                    </div>
-                    <div class="col-6 col-sm-3">
-                        <div class="resultItem humidity">
-                            <p><span class="resultValue">37</span>%</p>
-                            <h3 class="resultTitle">Humidity</h3>
-                        </div>
-                    </div>
-                    <div class="col-6 col-sm-3">
-                        <div class="resultItem wind">
-                            <p><span class="resultValue">0 </span> km/h <span class="windDir">WE</span></p>
-                            <h3 class="resultTitle">Wind</h3>
-                        </div>
-                    </div>
-
-                </div>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Weather App By Zihad</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <header class="text-center">
+      <h1>Weather App</h1>
+    </header>
+    <section class="wrapper">
+      <div class="container">
+        <div class="searchBox row">
+          <div class="col-7 col-sm-5 offset-0 offset-sm-2">
+            <h2>Enter a cityname and click the button to show the weather.</h2>
+            <input
+              type="text"
+              name="citySearch"
+              id="citySearch"
+              placeholder="e.g. Dhaka, Paris, London"
+            />
+          </div>
+          <div class="col-5 col-sm-3">
+            <button class="btn btn-primary searchButton">
+              Get weather info
+            </button>
+          </div>
+        </div>
+        <div class="result row text-center">
+          <div class="col-sm-12">
+            <div id="resultCity">
+              <h2>Sylhet</h2>
+              <div id="weatherCondition">
+                <p class="dayNightStatus">Day</p>
+                <img
+                  id="icon"
+                  src="assets/images/weatherIcons/64x64/day/113.png"
+                  alt=""
+                />
+                <p class="weather">Mist</p>
+              </div>
             </div>
-            <p style="text-align: center;margin-top: 35px;">Powered by <a href="https://www.apixu.com/" title="Weather API">Apixu.com</a></p>
-        </section>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-        <script src="assets/js/weather.js"></script>
-
-    </body>
+          </div>
+          <div class="col-6 col-sm-3">
+            <div class="resultItem temp">
+              <p><span class="resultValue">14</span>&#176;C</p>
+              <h3 class="resultTitle">Temperature</h3>
+            </div>
+          </div>
+          <div class="col-6 col-sm-3">
+            <div class="resultItem feelsLike">
+              <p><span class="resultValue">12</span>&#176;C</p>
+              <h3 class="resultTitle">Feels like</h3>
+            </div>
+          </div>
+          <div class="col-6 col-sm-3">
+            <div class="resultItem humidity">
+              <p><span class="resultValue">37</span>%</p>
+              <h3 class="resultTitle">Humidity</h3>
+            </div>
+          </div>
+          <div class="col-6 col-sm-3">
+            <div class="resultItem wind">
+              <p>
+                <span class="resultValue">0 </span> km/h
+                <span class="windDir">WE</span>
+              </p>
+              <h3 class="resultTitle">Wind</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p style="text-align: center;margin-top: 35px;">
+        Powered by
+        <a href="https://www.apixu.com/" title="Weather API">Apixu.com</a>
+      </p>
+    </section>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/weather.js"></script>
+  </body>
 </html>
